@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+rootProject.name = "Task Management"
+include ':app'

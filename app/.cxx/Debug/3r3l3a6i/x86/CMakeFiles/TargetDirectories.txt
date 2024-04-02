@@ -1,0 +1,3 @@
+D:/Android App/TaskManagement/app/.cxx/Debug/3r3l3a6i/x86/CMakeFiles/taskManagement.dir
+D:/Android App/TaskManagement/app/.cxx/Debug/3r3l3a6i/x86/CMakeFiles/edit_cache.dir
+D:/Android App/TaskManagement/app/.cxx/Debug/3r3l3a6i/x86/CMakeFiles/rebuild_cache.dir

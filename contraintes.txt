@@ -1,0 +1,7 @@
+sqlite
+
+
+mode offline connexion from bd 
+
+
+une fois mode online en ce charge automatiqument

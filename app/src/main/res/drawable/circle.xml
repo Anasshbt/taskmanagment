@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#00000000" /> <!-- Transparent background -->
+    <size
+        android:width="120dp"
+    android:height="120dp" />
+</shape>
+

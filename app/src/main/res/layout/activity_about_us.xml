@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About_us"
+    android:orientation="vertical"
+    android:background="@drawable/backvers1"
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_marginStart="10dp"
+            android:clickable="true"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+
+
+
+
+    </LinearLayout>
+    <TextView
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:layout_gravity="center"
+        android:text="Welcome to our task management app! At ENSIAS, we\'re dedicated to simplifying task management for individuals and teams. Our user-friendly platform empowers you to effortlessly create, organize, and prioritize tasks. Whether you\'re a professional, student, or homemaker, our app streamlines your workflow with features like deadline setting, collaboration tools, and progress tracking. Our team combines software development expertise and productivity strategies to continuously enhance our app. We value user feedback and prioritize customer satisfaction, offering dedicated support whenever you need it. Let's conquer your to-do list together!"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:backgroundTint="#F1FADA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchview_backgound"
+        android:layout_gravity="end"
+        android:layout_marginRight="27dp"
+        android:padding="7dp"
+        android:gravity="center_vertical"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="43dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Read More..."
+            android:textSize="19sp"
+            android:gravity="center_vertical"
+           />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

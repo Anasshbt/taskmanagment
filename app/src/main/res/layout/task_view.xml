@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@android:color/transparent"
+    android:layout_marginBottom="2dp"
+
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/searchview_backgound"
+        android:layout_marginBottom="5dp"
+
+
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitStart"
+            android:src="@android:drawable/ic_menu_report_image"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:text="Task title"
+                />
+
+
+            <TextView
+                android:id="@+id/cardDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="italic"
+                android:textSize="13dp"
+                android:textColor="@color/common_google_signin_btn_text_light"
+                android:text="Task deadline" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/isDone"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:background="@drawable/baseline_toggle_off_24"
+            android:orientation="horizontal"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

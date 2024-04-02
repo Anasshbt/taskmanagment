@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/Android App/TaskManagement/app/.cxx/Debug/3r3l3a6i/x86",
+  "command": "C:\\Users\\ANASS\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android24 --sysroot=C:/Users/ANASS/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DtaskManagement_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\taskManagement.dir\\taskManagement.cpp.o -c \"D:\\Android App\\TaskManagement\\app\\src\\main\\cpp\\taskManagement.cpp\"",
+  "file": "D:\\Android App\\TaskManagement\\app\\src\\main\\cpp\\taskManagement.cpp"
+}
+]

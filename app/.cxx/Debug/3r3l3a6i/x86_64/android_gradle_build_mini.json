@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "D:\\Android App\\TaskManagement\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\ANASS\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\Android App\\TaskManagement\\app\\.cxx\\Debug\\3r3l3a6i\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\ANASS\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\Android App\\TaskManagement\\app\\.cxx\\Debug\\3r3l3a6i\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "taskManagement::@6890427a1f51a3e7e1df": {
+      "artifactName": "taskManagement",
+      "abi": "x86_64",
+      "output": "D:\\Android App\\TaskManagement\\app\\build\\intermediates\\cxx\\Debug\\3r3l3a6i\\obj\\x86_64\\libtaskManagement.so",
+      "runtimeFiles": []
+    }
+  }
+}

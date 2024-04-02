@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp"
+    tools:context=".ShowTask">
+
+    <ImageView
+        android:id="@+id/taskImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Task Title"
+        android:layout_weight="1"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/switchDone"
+        android:layout_width="97dp"
+        android:layout_height="55dp"
+        android:showText="false"
+        android:textColor="#673AB7"
+        android:textOn="Done"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_weight="0"
+        tools:text="Done" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/taskDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deadline: Task Deadline"
+        android:textColor="#353535"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="377dp"
+        android:layout_height="296dp"
+        android:text="Task Description" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF0000"
+        android:id="@+id/deleteBtn"/>
+
+
+</LinearLayout>

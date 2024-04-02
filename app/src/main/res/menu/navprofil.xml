@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <item
+                android:id="@+id/edit"
+                android:icon="@drawable/baseline_account_circle_24"
+                android:title="Edit profile"
+
+                />
+            <item
+                android:id="@+id/verify"
+                android:icon="@drawable/baseline_mark_email_read_24"
+                android:title="Virify Email"
+
+                />
+
+            <item
+                android:id="@+id/syncaccount"
+                android:icon="@drawable/baseline_cloud_sync_24"
+                android:title="Account Sync"
+
+                />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/outline_ios_share_24"
+                android:title="Logout"
+
+                />
+
+
+
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerprofile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    >
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2D9596"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_marginStart="10dp"
+            android:clickable="true"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toglbarprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2D9596">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topappbarprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:navigationIcon="@drawable/outline_more_vert_24" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </LinearLayout>
+
+    <!-- Image de profil et bouton d'édition -->
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_below="@id/one"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:background="@drawable/searchview_backgound"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Hello, Anass"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="101dp"
+            android:layout_height="78dp"
+            android:src="@drawable/avatar2" />
+
+    </LinearLayout>
+
+    <!-- Texte de bienvenue -->
+
+
+    <!-- Section des statistiques -->
+    <LinearLayout
+        android:id="@+id/tree"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/two">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:minHeight="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/searchview_backgound"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_task_alt_24"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Tasks"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/searchview_backgound"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_pending_actions_24"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending Tasks"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/searchview_backgound"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_today_24"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today Tasks"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Graphique des tâches par semaine -->
+    <LinearLayout
+        android:id="@+id/forr"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/searchview_backgound"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/tree"
+        >
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/five"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/searchview_backgound"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="0dp"
+        android:padding="3dp"
+        android:layout_below="@id/forr"
+        >
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/searchview_backgound"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        android:clickable="true"
+        android:layout_below="@+id/five"
+        >
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_print_24"
+            android:layout_gravity="center" />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print"
+        android:textSize="24sp"/>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationviewprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu="@menu/navprofil"
+        android:layout_gravity="end"
+        android:elevation="9dp"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
