@@ -129,7 +129,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:padding="3dp"
-            android:backgroundTint="#2D9596"
+
+            android:background="#2D9596"
             app:fabCradleMargin="1dp"
             app:fabCradleRoundedCornerRadius="50dp">
 
@@ -145,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#2D9596"
+                    android:background="#2D9596"
                     android:src="@drawable/baseline_add_task_24"
                     app:maxImageSize="40dp"
                     android:layout_marginBottom="10dp"
@@ -167,7 +168,6 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/activity_navheader"
         app:menu="@menu/navigationitems"
-        android:background="#9AD0C2"
         android:elevation="8dp"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

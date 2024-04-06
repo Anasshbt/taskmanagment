@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.Demo_auth" parent="Base.Theme.Demo_auth" />
+
 </resources>
