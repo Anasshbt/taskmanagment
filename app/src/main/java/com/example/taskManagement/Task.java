@@ -7,6 +7,7 @@ import java.util.Calendar;
 
 public class Task implements Serializable {
     private String title;
+    private Boolean isFingerprintActive=false;
     private String description;
     private Calendar deadline;
     private long deadline_int;
@@ -77,6 +78,15 @@ public class Task implements Serializable {
     public void setDone(Boolean done) {
         isDone = done;
     }
+
+    public Boolean getIsFingerprintActive() {
+        return isFingerprintActive;
+    }
+
+    public void setIsFingerprintActive(Boolean fingerprintActive) {
+        isFingerprintActive = fingerprintActive;
+    }
+
 
     public String getOwnerId() {
         return ownerId;

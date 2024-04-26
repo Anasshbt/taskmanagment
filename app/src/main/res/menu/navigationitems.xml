@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view"
     >
@@ -27,17 +28,26 @@
             android:id="@+id/notif"
             android:icon="@drawable/baseline_add_alert_24"
             android:title="Notification &amp; Reminder" />
+
         <item
-            android:id="@+id/darkmod"
-            android:icon="@drawable/baseline_brightness_6_24"
-            android:title="Dark Mode" />
+            android:id="@+id/meteo"
+            android:icon="@drawable/sharp_weather_hail_24"
+            android:title="Weather" />
         <item
             android:id="@+id/synch"
             android:icon="@drawable/baseline_cached_24"
             android:title="Sync" />
+        <item
+            android:id="@+id/empreinte"
+            android:title="Empreinte"
+            android:checkable="true"
+            android:icon="@drawable/baseline_fingerprint_24"
+
+             />
 
     </menu>
     </item>
+
 
 
 

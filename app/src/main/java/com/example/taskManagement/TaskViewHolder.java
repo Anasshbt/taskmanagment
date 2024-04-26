@@ -58,9 +58,9 @@ public class TaskViewHolder extends RecyclerView.ViewHolder {
         }
 
         if (!this.task.getDone()) {
-            isDone.setBackgroundResource(R.drawable.baseline_toggle_off_24);
+            isDone.setBackgroundResource(R.drawable.tasknotdone);
         } else {
-            isDone.setBackgroundResource(R.drawable.baseline_toggle_on_24);
+            isDone.setBackgroundResource(R.drawable.taskdone);
         }
     }
 }

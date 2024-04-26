@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -76,10 +77,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void updateUI(FirebaseUser currentUser) {
         if (currentUser != null) {
+
             testView.setVisibility(View.GONE);
             authView.setVisibility(View.GONE);
             registerView.setVisibility(View.GONE);
             Intent intent = new Intent(this, HomeActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, PendingIntent.FLAG_MUTABLE);
             intent.putExtra("userId", currentUser.getUid());
             startActivity(intent);
         } else {

@@ -48,7 +48,7 @@
                 <!-- Votre SearchView -->
                 <SearchView
                     android:id="@+id/searchView"
-                    android:layout_width="260dp"
+                    android:layout_width="240dp"
                     android:layout_height="40dp"
                     android:background="@drawable/searchview_backgound"
                     android:iconifiedByDefault="false"
@@ -69,8 +69,8 @@
                     android:src="@drawable/baseline_add_alert_24" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="80dp"
                     android:paddingLeft="5dp"
                     android:src="@drawable/baseline_language_24" />
             </LinearLayout>

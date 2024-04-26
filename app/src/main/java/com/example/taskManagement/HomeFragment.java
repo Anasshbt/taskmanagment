@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment {
                                                     requireActivity(),
                                                     taskId.intValue(),
                                                     intent,
-                                                    PendingIntent.FLAG_UPDATE_CURRENT);
+                                                    PendingIntent.FLAG_MUTABLE);
                                             alarmManager.setExact(
                                                     AlarmManager.RTC_WAKEUP,
                                                     leTask.getDeadline_int(),
