@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MeetFragment"
-    android:orientation="vertical">
+    tools:context=".Meteo"
+    android:orientation="vertical"
+    android:background="@drawable/backweater12"
+    >
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -26,31 +28,24 @@
             android:id="@+id/idIVBack"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="#FEFDED"
             android:scaleType="centerCrop"/>
+
 
         <LinearLayout
             android:id="@+id/partiecity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="10dp"
 
-            <ImageView
-                android:id="@+id/addcitymeteo"
-                android:layout_width="30dp"
-                android:layout_height="70dp"
-                android:src="@drawable/baseline_add_circle_outline_24" />
+            >
+
 
             <TextView
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
                 android:background="@drawable/searchview_backgound"
                 android:gravity="center"
                 android:padding="10dp"
@@ -67,38 +62,50 @@
             android:orientation="horizontal"
             android:layout_below="@+id/partiecity"
             android:id="@+id/idLLEdt"
-            android:weightSum="5"
-            android:padding="4dp">
+            android:background="@drawable/cadre"
+            android:layout_margin="10dp"
+
+           >
             <com.google.android.material.textfield.TextInputLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/idTTLCity"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/idTILCity"
                 android:layout_margin="0dp"
-                android:layout_weight="4.5"
-                android:hint="ENTER City Name:"
-                android:background="@android:color/transparent"
-                android:padding="4.5dp"
                 app:hintTextColor="#000"
                 android:textColorHint="#000"
+                android:hint="ENTER City Name:"
+
                 >
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/idEdtCity">
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/idEdtCity"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:background="@android:color/transparent"
 
-                </com.google.android.material.textfield.TextInputEditText>
+
+                    />
+
+
 
             </com.google.android.material.textfield.TextInputLayout>
+
+
+
             <ImageView
-                android:id="@+id/idIvSearch"
+                android:id="@+id/idIVSearch"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:src="@drawable/outline_search_24"
+                android:layout_height="34dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:background="@android:color/transparent"/>
+                android:layout_weight="1.5"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/outline_search_24" />
 
 
 
@@ -109,23 +116,24 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/idLLEdt"
             android:gravity="center_horizontal"
-            android:id="@+id/idtemperature"
+            android:id="@+id/idTVTemperature"
             android:text="23"
             android:textSize="80sp"
 
             />
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/idimagetemperature"
-            android:layout_below="@+id/idtemperature"
-            android:src="@mipmap/ic_launcher"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/idIVIcon"
+            android:layout_below="@+id/idTVTemperature"
+            android:src="@drawable/weather"
             android:layout_centerHorizontal="true"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idtvcondition"
-            android:layout_below="@+id/idimagetemperature"
+            android:id="@+id/idTVCondition"
+            android:layout_below="@+id/idIVIcon"
             android:text="condition"
             android:gravity="center_horizontal"
             android:textAlignment="center"
@@ -136,7 +144,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idtvcondition"
+            android:layout_below="@+id/idTVCondition"
             android:id="@+id/todaytext"
             android:text="Today weather forcast"
             android:gravity="center"
@@ -166,6 +174,16 @@
 
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fin"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#008DDA"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
 
 
 

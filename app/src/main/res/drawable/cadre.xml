@@ -8,8 +8,8 @@
         android:radius="15dp"
         android:tint="@android:color/transparent"/>
     <stroke
-        android:color="#F7EEDD"
-        android:width="4dp"
+        android:color="#008DDA"
+        android:width="2dp"
         />
 
 

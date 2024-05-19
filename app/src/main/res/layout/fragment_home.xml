@@ -13,72 +13,12 @@
         android:orientation="vertical">
 
 
-    <LinearLayout
-        android:id="@+id/categoriesLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/firstline"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="7dp"
-        android:layout_gravity="center|center_vertical">
 
-        <TextView
-            android:id="@+id/categoryAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/searchview_backgound"
-            android:padding="8dp"
-            android:text="All"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/categoryWork"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/searchview_backgound"
-            android:padding="8dp"
-            android:text="Work"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/categoryEducation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/searchview_backgound"
-            android:padding="8dp"
-            android:text="Education"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/categoryShopping"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/searchview_backgound"
-            android:padding="8dp"
-            android:text="Shopping"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/addcategorie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:background="@drawable/searchview_backgound"
-            android:padding="8dp"
-            android:text="+Add"
-            android:textColor="@android:color/black" />
-
-    </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="3dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_below="@id/categoriesLayout"
         android:background="@android:color/transparent"

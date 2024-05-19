@@ -5,6 +5,7 @@ import static androidx.core.graphics.drawable.DrawableCompat.applyTheme;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -28,6 +29,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
@@ -94,7 +96,7 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
     private BottomAppBar bottomAppBar;
     private BottomNavigationView bottomNavigationView;
 
-    private Executor executor = Executors.newSingleThreadExecutor();
+
 
 
     @Override
@@ -105,16 +107,20 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
 
 
         setContentView(R.layout.activity_home);
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_IMMERSIVE
+        getWindow().setNavigationBarColor(Color.parseColor("#008DDA"));
+        getWindow().setStatusBarColor(Color.parseColor("#008DDA"));
+        // getWindow().getDecorView().setSystemUiVisibility(
+               /// View.SYSTEM_UI_FLAG_IMMERSIVE
                         // Set the content to appear under the system bars so that the
                         // content doesn't resize when the system bars hide and show.
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                       // | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                       //S | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                       // | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                         // Hide the nav bar and status bar
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN);
+                        //| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        //| View.SYSTEM_UI_FLAG_FULLSCREEN);
+
+
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -181,10 +187,7 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
                     startActivity(intent);
                     finish();
 
-                } else if (itemId == R.id.rateus) {
-                    return true;
-
-                } else if (item.getItemId() == R.id.theme) {
+                }  else if (item.getItemId() == R.id.theme) {
                     ThemeFragment FragThem = new ThemeFragment();
                     ft.replace(R.id.fragmentcontainer, FragThem);
 
@@ -256,10 +259,11 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
 
             } else if (item.getItemId() == R.id.Profile) {
 
-
-                Intent intent = new Intent(getApplicationContext(), Profile.class);
-                startActivity(intent);
-                return true;
+                ProfilFragment profile = new ProfilFragment();
+               ft.replace(R.id.fragmentcontainer, profile);
+                //Intent intent = new Intent(getApplicationContext(), Profile.class);
+                //startActivity(intent);
+                //return true;
             }
             ft.commit();
             return true;
@@ -338,6 +342,8 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
         toglbar.setBackgroundColor(color);
         bottomAppBar.setBackgroundColor(color);
         bottomNavigationView.setBackgroundColor(color);
+        getWindow().setNavigationBarColor(color);
+        getWindow().setStatusBarColor(color);
 
 
     }

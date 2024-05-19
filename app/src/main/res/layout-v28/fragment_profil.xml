@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfilFragment">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/cadre"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Hello, Anass"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="58dp"
+                android:src="@drawable/avatar2" />
+
+        </LinearLayout>
+        <!-- Section des statistiques -->
+        <LinearLayout
+            android:id="@+id/two"
+            android:layout_below="@id/one"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:minHeight="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/cadre"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_task_alt_24"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed Tasks"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="3dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cadre"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_pending_actions_24"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending Tasks"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="3dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cadre"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_today_24"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Tasks"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="3dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Graphique des tâches par semaine -->
+        <LinearLayout
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/cadre"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/two"
+            >
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/cadre"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:layout_below="@+id/forr"
+            >
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_print_24"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sexx"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/cadre2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:layout_below="@+id/five"
+            android:outlineAmbientShadowColor="@color/blue"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_manage_accounts_24"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="start|center"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edit profile "
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/seven"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/cadre2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:layout_below="@+id/sexx"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logout"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="start|center"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/eigh"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/cadre2"
+            android:backgroundTint="#FFD0D0"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:layout_below="@+id/seven"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/outline_no_accounts_24"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="start|center"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Account"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/nine"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/cadre2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:clickable="true"
+            android:focusable="true">
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_print_24"
+                android:layout_gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print"
+                android:textSize="24sp"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </GridLayout>
+
+
+</ScrollView>
