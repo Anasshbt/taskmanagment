@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Meteo"
     android:orientation="vertical"
-    android:background="@drawable/backweater12"
+    android:background="@drawable/showtask3"
     >
 
     <ProgressBar

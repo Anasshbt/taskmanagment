@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".About_us"
     android:orientation="vertical"
-    android:background="@drawable/backvers1"
+    android:background="@drawable/showtask1"
     >
 
     <LinearLayout
@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center_vertical"
+        android:background="#008DDA"
         >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_back_24"
+
             android:layout_marginStart="10dp"
             android:clickable="true"/>
 
@@ -38,7 +39,7 @@
 
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

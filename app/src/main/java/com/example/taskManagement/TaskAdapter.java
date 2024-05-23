@@ -44,4 +44,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
         return tasks.size();
     }
 
+    public void setTasks(ArrayList<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+
+
 }

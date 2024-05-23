@@ -8,7 +8,19 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".AddTask"
-    android:background="@drawable/back6">
+    android:background="@drawable/showtask1">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#008DDA"
+        android:orientation="horizontal"
+        >
+
+
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -67,6 +79,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="Set Time"
+            android:backgroundTint="#ACE2E1"
             />
 
 
@@ -75,7 +88,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="Set Date"/>
+            android:text="Set Date"
+            android:backgroundTint="#41C9E2"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -86,7 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:text="Add Image"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="sans-serif"
+        android:backgroundTint="#41C9E2"/>
 
     <Button
         android:id="@+id/createTaskBtn"
@@ -94,6 +109,7 @@
         android:layout_height="wrap_content"
         android:text="Create Task!"
         android:fontFamily="sans-serif"
+        android:backgroundTint="#41C9E2"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="50dp"
         />

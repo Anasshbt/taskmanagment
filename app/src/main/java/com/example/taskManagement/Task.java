@@ -15,6 +15,16 @@ public class Task implements Serializable {
     private String docUri;
     private Boolean isDone = false;
 
+    private int favoris=0;
+
+    public int getFavoris() {
+        return favoris;
+    }
+
+    public void setFavoris(int favoris) {
+        this.favoris = favoris;
+    }
+
     private String ownerId;
 
     public Task() {
@@ -105,6 +115,7 @@ public class Task implements Serializable {
                 ", img='" + imgUri + '\'' +
                 ", docUri='" + docUri + '\'' +
                 ", isDone=" + isDone +
+                ", favoris=" + favoris +
                 '}';
     }
 

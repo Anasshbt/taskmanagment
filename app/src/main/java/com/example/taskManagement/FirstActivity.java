@@ -66,6 +66,6 @@ public class FirstActivity extends AppCompatActivity {
 
 
             }
-        }, 4000);
+        }, 2000);
     }
 }

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="color_square_size">185dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

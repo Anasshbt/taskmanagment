@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/cadre2"
         android:layout_gravity="center"
-        android:backgroundTint="#9AD0C2">
+        android:backgroundTint="#F6F193">
 
         <TextView
             android:layout_width="match_parent"

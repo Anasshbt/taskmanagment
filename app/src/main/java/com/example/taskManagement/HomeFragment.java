@@ -1,5 +1,7 @@
 package com.example.taskManagement;
 
+import static com.example.taskManagement.R.id.searchView;
+
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -7,10 +9,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -66,7 +72,39 @@ public class HomeFragment extends Fragment {
         tasksRecycler.setHasFixedSize(true);
         tasksRecyclerAdapter = new TaskAdapter(tasks);
         tasksRecycler.setAdapter(tasksRecyclerAdapter);
+
+        EditText searchView = getActivity().findViewById(R.id.searchView);
+
+
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.d("TextChange", s.toString());
+                searchTasks(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+
+
+
+
         return rootView;
+
+
+
+
+
     }
 
     private void getTasksFromDB() {
@@ -110,5 +148,21 @@ public class HomeFragment extends Fragment {
                             }
                         }
                 );
+    }
+
+    public void searchTasks(String content) {
+
+        if (content.length() > 0) {
+            ArrayList<com.example.taskManagement.Task> t = new ArrayList<>();
+            for (com.example.taskManagement.Task task : tasks) {
+                String b = task.getTitle() + task.getDescription();
+                if (b.contains(content))
+                    t.add(task);
+            }
+            tasksRecyclerAdapter.setTasks(t);
+        } else {
+            tasksRecyclerAdapter.setTasks(tasks);
+        }
+        tasksRecyclerAdapter.notifyDataSetChanged();
     }
 }

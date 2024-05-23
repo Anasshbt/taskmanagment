@@ -1,10 +1,13 @@
 package com.example.taskManagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,7 +60,26 @@ public class ProfilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false);
+        View view = inflater.inflate(R.layout.fragment_profil, container, false);
+
+        // Initialisation de la vue logout en utilisant la vue gonflée
+        View logout = view.findViewById(R.id.logoutfragment);
+
+        // Ajoutez d'autres initialisations ou écouteurs ici
+        // Par exemple, pour ajouter un écouteur de clic au bouton logout
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FirstActivity.class);
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                mAuth.signOut();
+                startActivity(intent);
+                if (getActivity() != null) {
+                    getActivity().finish();
+                }
+            }
+        });
+
+        return view;
     }
 }

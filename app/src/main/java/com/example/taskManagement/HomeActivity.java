@@ -33,6 +33,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -71,7 +72,7 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
     private FirebaseAuth mAuth;
 
     AlarmManager alarmManager;
-
+ImageView logoutfragment;
 
     private Switch switchButton;
 
@@ -99,6 +100,7 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
 
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,6 +163,21 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
         bottomNavigationView.setBackgroundColor(Color.parseColor("#008DDA"));
 
 
+
+
+
+     /* logoutfragment=findViewById(R.id.logoutfragment);
+
+      logoutfragment.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent intent = new Intent(HomeActivity.this, FirstActivity.class);
+              mAuth.signOut();
+              startActivity(intent);
+              finish();
+          }
+      });*/
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,7 +210,7 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
 
 
                 } else if (item.getItemId() == R.id.meteo) {
-                    Intent intent = new Intent(getApplicationContext(), Meteo.class);
+                    Intent intent = new Intent(HomeActivity.this, Meteo.class);
                     startActivity(intent);
                     return true;
 
@@ -227,7 +244,28 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
                     });
 
 
-                } else {
+                } else if (item.getItemId() == R.id.feedback) {
+                    Intent intent = new Intent(getApplicationContext(), FeeDback.class);
+                    startActivity(intent);
+                    return true;
+
+                } else if (item.getItemId() == R.id.help) {
+                    Intent intent = new Intent(getApplicationContext(), Help.class);
+                    startActivity(intent);
+                    return true;
+
+                }
+                else if (item.getItemId() == R.id.shareapp) {
+                    shareApp();
+
+                }
+
+
+
+
+
+
+                else {
 
 
                     return true;
@@ -408,6 +446,26 @@ public class HomeActivity extends AppCompatActivity implements ThemeFragment.OnT
                         // Gérer les erreurs de mise à jour
                     });
         }
+
+    private void shareApp() {
+        String shareText = "📱 Discover the Ultimate Task Management App! 📝\n\n"
+                + "Effortlessly organize your tasks, set reminders, and boost your productivity with our easy-to-use Task Management app. 🎯\n\n"
+                + "⭐ Key Features:\n"
+                + "• Create and manage tasks with ease\n"
+                + "• Set deadlines and reminders\n"
+                + "• Prioritize tasks for better focus\n"
+                + "• Sync across devices\n"
+                + "• Share tasks with your team\n\n"
+                + "Download now and take control of your to-do list! 📲\n"
+                + "👉 www.anasselhabti.me/taskmanagment\n\n"
+                + "#Productivity #TaskManagement #GetThingsDone";
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Task Management App");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+        startActivity(Intent.createChooser(shareIntent, "Share via"));
+    }
 
 
 

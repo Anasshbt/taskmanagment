@@ -20,6 +20,7 @@ public class ShowTask extends AppCompatActivity {
     TextView description;
     TextView deadline;
     Switch doneSwitch;
+    Switch favoris;
     ImageView image;
     Boolean deleting = false;
 
@@ -41,6 +42,7 @@ public class ShowTask extends AppCompatActivity {
         doneSwitch = findViewById(R.id.switchDone);
         image = findViewById(R.id.taskImage);
         deleteBtn = findViewById(R.id.deleteBtn);
+        favoris= findViewById(R.id.switchfavoris);
 
         title.setText(task.getTitle());
         description.setText(task.getDescription());
@@ -48,6 +50,10 @@ public class ShowTask extends AppCompatActivity {
                 "Deadline: " + df.format(task.getDeadline().getTime())
         );
         doneSwitch.setChecked(task.getDone());
+        favoris.setChecked(intToBoolean(task.getFavoris()));
+
+
+        //favoris.setChecked(task.getFavoris());
         if (task.getImgUri() != null &&
                 !task.getImgUri().isEmpty()) {
             image.setImageURI(Uri.parse(task.getImgUri()));
@@ -57,6 +63,17 @@ public class ShowTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 task.setDone(!task.getDone());
+            }
+        });
+        favoris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (intToBoolean(task.getFavoris())){
+                    task.setFavoris(0);
+                }else{
+                    task.setFavoris(1);
+                }
+
             }
         });
 
@@ -78,6 +95,16 @@ public class ShowTask extends AppCompatActivity {
             String documentId = task.getDocUri();
             db.collection("tasks").document(documentId).set(task);
             super.onDestroy();
+        }
+    }
+
+    public static boolean intToBoolean(int value) {
+        if (value == 0) {
+            return false;
+        } else if (value == 1) {
+            return true;
+        } else {
+            throw new IllegalArgumentException("Le paramètre doit être soit 0 soit 1.");
         }
     }
 }

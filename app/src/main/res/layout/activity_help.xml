@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".Help"
+    android:background="@drawable/showtask1">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#008DDA"
+
+            >
+
+
+
+        </LinearLayout>
+
+        <!-- Title of the Help Page -->
+        <TextView
+            android:id="@+id/help_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help &amp; FAQ"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Question 1 -->
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q1: How do I create a new task?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 1 -->
+        <TextView
+            android:id="@+id/answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To create a new task, go to the main screen and click on the 'Add Task' button. Fill in the task details and save."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 2 -->
+        <TextView
+            android:id="@+id/question2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q2: How can I edit a task?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 2 -->
+        <TextView
+            android:id="@+id/answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To edit a task, tap on the task you want to edit. Make the necessary changes and save the task."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 3 -->
+        <TextView
+            android:id="@+id/question3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q3: How do I delete a task?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 3 -->
+        <TextView
+            android:id="@+id/answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To delete a task, swipe left or right on the task you want to delete. Confirm the deletion in the pop-up dialog."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 4 -->
+        <TextView
+            android:id="@+id/question4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q4: How do I set a reminder for a task?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 4 -->
+        <TextView
+            android:id="@+id/answer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To set a reminder, edit the task and select the 'Set Reminder' option. Choose the date and time for the reminder."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 5 -->
+        <TextView
+            android:id="@+id/question5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q5: How do I prioritize my tasks?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 5 -->
+        <TextView
+            android:id="@+id/answer5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To prioritize your tasks, assign a priority level when creating or editing a task. You can then sort your tasks by priority."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 6 -->
+        <TextView
+            android:id="@+id/question6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q6: How do I mark a task as completed?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 6 -->
+        <TextView
+            android:id="@+id/answer6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To mark a task as completed, tap on the checkbox next to the task. The task will be moved to the completed section."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 7 -->
+        <TextView
+            android:id="@+id/question7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q7: Can I share my tasks with others?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 7 -->
+        <TextView
+            android:id="@+id/answer7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes, you can share tasks with others by using the 'Share' option in the task menu. You can share via email or other messaging apps."
+            android:paddingBottom="8dp"/>
+
+        <!-- Question 8 -->
+        <TextView
+            android:id="@+id/question8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q8: How do I backup my tasks?"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <!-- Answer 8 -->
+        <TextView
+            android:id="@+id/answer8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To backup your tasks, go to Settings and select 'Backup'. Choose the backup method that suits you best, such as Google Drive or local storage."
+            android:paddingBottom="8dp"/>
+
+        <!-- Additional Information -->
+        <TextView
+            android:id="@+id/additional_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For more information, visit our website or contact support."
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

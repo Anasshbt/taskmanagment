@@ -46,10 +46,11 @@
                 </com.google.android.material.appbar.AppBarLayout>
 
                 <!-- Votre SearchView -->
-                <SearchView
+                <EditText
                     android:id="@+id/searchView"
                     android:layout_width="240dp"
                     android:layout_height="40dp"
+                    android:padding="15dp"
                     android:background="@drawable/searchview_backgound"
                     android:iconifiedByDefault="false"
                     android:queryBackground="@android:color/transparent"
@@ -114,7 +115,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/icon3"
+                android:src="@drawable/back5"
 
 
 
